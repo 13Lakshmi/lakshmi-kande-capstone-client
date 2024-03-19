@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
 
-### `npm start`
+### Problem
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- As a user, I want to be able to create an account to manage my visited places
+- As a user, I want to be able to login to my account to manage my visited places
 
-### `npm run build`
+- As a logged in user, I want to be able to add to todo list
+- As a logged in user, I want to be able to see my visited attractions
+- As a logged in user, I want to be able to select place to get all attractions for that selected place
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Implementation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack
 
-### `npm run eject`
+- React ![alt text](README-images/reactlogo.png)
+- SASS ![alt text](README-images/sass_logo.png)
+- MySQL ![alt text](README-images/mysql_logo.png)
+- Express ![alt text](README-images/express_logo.png)
+- Client libraries: 
+    - react
+    - react-router
+    - axios
+- Server libraries:
+    - knex
+    - express
+    - bcrypt for password hashing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### APIs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- No external APIs will be used for the sprint
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Sitemap
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Home 
+- Register
+- Login
+- Attractions
+- To do List
 
-## Learn More
+### Mockups
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Home Page
+![](home.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Register Page
+![](register.png)
 
-### Code Splitting
+#### Login Page
+![](login.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Attractions Page
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### To do list Page
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+### Auth
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- JWT auth
+    - Before adding auth, all API requests will be using a fake user with id 1
+    - Added after core features have first been implemented
+    - Store JWT in localStorage, remove when a user logs out
+    - Add states for logged in showing different UI in places listed in mockups
 
-### `npm run build` fails to minify
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Create client
+    - react project with routes and boilerplate pages
+
+- Create server
+    - express project with routing
+
+- Create migrations
+
+- Gather 15 sample cities/ countries
+
+- Create seeds with sample attractions data
+
+- Bug fixes
+
+- DEMO DAY
+
+## Nice-to-haves
+
