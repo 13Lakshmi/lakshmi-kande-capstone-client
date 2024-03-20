@@ -3,10 +3,11 @@
 
 ## Overview
 
+The purpose of this project was to create a website for travel enthusiasts. The original intent was to let users search for destinations, select cities & add attractions to their bucket list. Additionally, users would have the option to sign up and remove attractions from their lists.
 
 ### Problem
 
-
+Many of us spend hours scrolling through social media platforms like TikTok or Instagram, liking and saving numerous videos without ever returning to them. We come across countless unique sightseeing spots, but there's no single platform to gather and showcase these findings for future reference. That's why we're building a website where people can share their favorite places with each other.
 
 ### Features
 
@@ -22,7 +23,7 @@
 
 ### Tech Stack
 
-- React ![alt text](README-images/reactlogo.png)
+- React ![alt text](README-images/react_logo.png)
 - SASS ![alt text](README-images/sass_logo.png)
 - MySQL ![alt text](README-images/mysql_logo.png)
 - Express ![alt text](README-images/express_logo.png)
@@ -49,31 +50,17 @@
 
 ### Mockups
 
-#### Home Page
-![](home.png)
-
 #### Register Page
-![](register.png)
+![alt text](README-images/Register.JPG)
 
 #### Login Page
-![](login.png)
+![alt text](README-images/Login.JPG)
 
 #### Attractions Page
-
+![alt text](README-images/Attractions.JPG)
 
 #### To do list Page
-
-
-
-
-
-### Auth
-
-- JWT auth
-    - Before adding auth, all API requests will be using a fake user with id 1
-    - Added after core features have first been implemented
-    - Store JWT in localStorage, remove when a user logs out
-    - Add states for logged in showing different UI in places listed in mockups
+![alt text](README-images/BucketList.JPG)
 
 ## Roadmap
 
@@ -93,5 +80,5 @@
 
 - DEMO DAY
 
-## Nice-to-haves
+
 
