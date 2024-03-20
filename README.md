@@ -1,6 +1,7 @@
 # Project Title
 
 
+
 ## Overview
 
 The purpose of this project was to create a website for travel enthusiasts. The original intent was to let users search for destinations, select cities & add attractions to their bucket list. Additionally, users would have the option to sign up and remove attractions from their lists.
@@ -23,10 +24,10 @@ Many of us spend hours scrolling through social media platforms like TikTok or I
 
 ### Tech Stack
 
-- React ![alt text](README-images/react_logo.png)
-- SASS ![alt text](README-images/sass_logo.png)
-- MySQL ![alt text](README-images/mysql_logo.png)
-- Express ![alt text](README-images/express_logo.png)
+- React <img src="react_logo.png" alt="react" width="rem" height="2rem">
+- SASS  <img src="sass_logo.png" alt="sass" width="rem" height="2rem">
+- MySQL  <img src="mysql_logo.png" alt="mysql" width="rem" height="2rem">
+- Express  <img src="express_logo.png" alt="express" width="rem" height="2rem">
 - Client libraries: 
     - react
     - react-router
