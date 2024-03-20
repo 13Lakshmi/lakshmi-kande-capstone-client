@@ -24,10 +24,10 @@ Many of us spend hours scrolling through social media platforms like TikTok or I
 
 ### Tech Stack
 
-- React <img src="react_logo.png" alt="react" width="2rem" height="2rem">
-- SASS  <img src="sass_logo.png" alt="sass" width="2rem" height="2rem">
-- MySQL  <img src="mysql_logo.png" alt="mysql" width="2rem" height="2rem">
-- Express  <img src="express_logo.png" alt="express" width="2rem" height="2rem">
+- React![alt text](README-images/react.JPG)
+- SASS![alt text](README-images/sass.JPG)
+- MySQL![alt text](README-images/mysql.JPG)
+- Express![alt text](README-images/express.JPG)
 - Client libraries: 
     - react
     - react-router
