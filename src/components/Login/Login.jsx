@@ -6,10 +6,17 @@ import { useNavigate } from "react-router-dom";
 function Login() {
     const navigate = useNavigate();
 
+
+    const toAttractions = (event) =>{
+      event.preventDefault();
+      navigate("/Attractions");
+  }
+
     const toSignUp = (event) =>{
         event.preventDefault();
-        navigate("/Signup");
+        navigate("/SignUp");
     }
+
   return (
     <div className="form">
 
@@ -38,7 +45,7 @@ function Login() {
           <FaLock className="form__icon1" />
        
 
-        <button className="form__button" type="submit">
+        <button onClick={toAttractions} className="form__button" type="submit">
           Log In
         </button>
       </div>

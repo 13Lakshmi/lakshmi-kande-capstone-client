@@ -1,10 +1,10 @@
-import "./Signup.scss";
+import "./SignUp.scss";
 
-function Signup(){
+function SignUp(){
     return(
         <div>
             <div className="form__signup">
-                <h2 className="signup__title">Signup</h2>
+                <h2 className="signup__title">SignUp</h2>
                 <div className="form__input-box">
                 <input
                     className="form__input"
@@ -26,4 +26,4 @@ function Signup(){
     );
 }
 
-export default Signup;
+export default SignUp;
