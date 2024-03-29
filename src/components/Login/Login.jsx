@@ -1,6 +1,7 @@
 import "./Login.scss";
 import React from "react";
-import { FaUser, FaLock } from "react-icons/fa";
+import {  FaLock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -23,18 +24,20 @@ function Login() {
       <div className="form__login">
         <h1 className="form__login-title">Login</h1>
 
-       
+       <div className="form__input-box">
           <input
             className="form__input"
             type="email"
-            placeholder="Username"
+            placeholder="Email"
             id="email"
             name="email"
           />
-          <FaUser className="form__icon" />
+          <MdEmail className="form__icon" />
+          </div>
+          
         
-
-        
+          
+          <div className="form__input-box">
           <input
             className="form__input"
             type="password"
@@ -42,7 +45,10 @@ function Login() {
             id="password"
             name="password"
           />
-          <FaLock className="form__icon1" />
+          <FaLock className="form__icon" />
+          </div>
+          
+          
        
 
         <button onClick={toAttractions} className="form__button" type="submit">
