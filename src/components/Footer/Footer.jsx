@@ -1,30 +1,53 @@
-import './Footer.scss';
-import { Link } from 'react-router-dom';
-import facebook from '../../assets/Icons/icon-facebook.png';
-import instagram from '../../assets/Icons/icon-instagram.png';
-import twitter from '../../assets/Icons/icon-twitter.png';
+import "./Footer.scss";
+import twitter from "../../assets/Icons/twitter-icon.svg";
+import fbook from "../../assets/Icons/facebook-icon.svg";
+import insta from "../../assets/Icons/insta.svg";
+import github from "../../assets/Icons/github.svg";
+import { Link } from "react-router-dom";
 
-
-const Footer = () => {
-    return (
-        <footer className="footer">
-            <div className="footer__container">
-                <div className="footer__section">
-                    <h3 className="footer__heading">Contact</h3>
-                    <p className="footer__subtitle">Email</p>
-                    <a className="footer__link" href="mailto:info@gmail.com">info@gmail.com</a>
-                </div>
-                <div className="footer__section">
-                    <h3 className="footer__heading">Social</h3>
-                    <div className="footer__social-links">
-                        <Link to="https://www.instagram.com"><img className="footer__social-icon" src={facebook} alt="Instagram icon" /></Link>
-                        <Link to="https://www.facebook.com"><img className="footer__social-icon" src={instagram} alt="Facebook icon" /></Link>
-                        <Link to="https://www.twitter.com"><img className="footer__social-icon" src={twitter} alt="Twitter icon" /></Link>
-                    </div>
-                </div>
+function Footer() {
+  return (
+    <>
+      <div className="footerWrapper">
+        <div className="footerHeader__textBox">
+          <div className="footerHeader__iconContainer">
+            <div>
+              <Link to="https://facebook.com">
+                <img
+                  className="footerHeader__icon"
+                  src={fbook}
+                  alt="facebook icon"
+                />
+              </Link>
+              <Link to="https://twitter.com">
+                <img
+                  className="footerHeader__icon"
+                  src={twitter}
+                  alt="twitter icon"
+                />
+              </Link>
+              <Link to="https://www.instagram.com/">
+                <img
+                  className="footerHeader__icon"
+                  src={insta}
+                  alt="instagram icon"
+                />
+              </Link>
             </div>
-        </footer>
-    );
-};
-
+          </div>
+          <div className="footerHeader__iconBox2">
+            <Link to="https://github.com/">
+              <img
+                className="footerHeader__icon"
+                src={github}
+                alt="github icon"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 export default Footer;
+

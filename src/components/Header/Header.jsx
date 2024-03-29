@@ -1,25 +1,22 @@
 import './Header.scss'
 
-
-
 const Header = () => {
 
     return (
-        <header className="header">
-            <div className="header__container">
-                <nav className="navbar">
-                    <ul className="navbar__list">
-                        <li className="navbar__item">
-                                 Attractions
-                        </li>
-                        <li className="navbar__item">
-                                Bucket list
-                        </li>
-                    </ul>
-                </nav>
+        <div className='header'>
+            <div className='header__image'>
+            <a href="logo" className='header__logo'>Logo</a>
             </div>
-        </header >
+            
+            <div className='header__nav-bar'>
+                <a className='header__list' href="#">Attractions</a>
+                <a className='header__list' href="#">BucketList</a>
+                <a className='header__list' href="#">Logout</a>
+            </div>
+        </div>    
     );
 };
 
 export default Header;
+
+
