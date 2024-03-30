@@ -8,10 +8,6 @@ body{
      align-items: center;
      min-height: 100vh;
      background-color: khaki;
-    // background-repeat: no-repeat;
-    // background-size:cover;
-    // background-position:center;
-    // padding-left:3rem;
     
 }
 .form{
@@ -20,6 +16,7 @@ body{
     color: white;
     border-radius:2.5rem;
     padding:1.875rem 2.5rem;
+    margin-left: 5rem;
     
 
     &__login-title {
@@ -58,36 +55,6 @@ body{
         transform: translateY(-50%);
        
     }
-    // &__icon{
-    //     position: absolute;
-    //     right:8rem;
-    //     top:50%;
-    //     transform: translateY(-50%);
-    //     font-size: 1rem;
-    //     @include tablet{
-    //         left:32rem;
-    //         top:16.5rem;
-    //     }
-//         @include desktop{
-//             left:48rem;
-//             top:16.5rem;
-//         }
-   //  }
-//     &__icon1{
-//         position: absolute;
-//         left:20rem;
-//         top:20rem;
-//         transform: translateY(-50%);
-//         font-size: 1rem;
-//         @include tablet{
-//             left:32rem;
-//             top:21rem;
-//         }
-//         @include desktop{
-//             left:48rem;
-//             top:21rem;
-//         }
-//     }
 
     &__button{
         width:100%;

@@ -4,8 +4,10 @@
 
 
 
-.footerHeader {
+.footer {
+  
   &__textBox {
+    background-color: white;
     position: fixed;
     justify-content: flex-end;
     width:100%;

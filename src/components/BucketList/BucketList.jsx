@@ -30,7 +30,7 @@ function BucketList () {
             console.log("deleted all buckelist");
             setBucketListData(bucketListData.filter(item => item.id !== id));
         }catch(error){
-            console.error('failed to delete all bucketlist:',error.response.data);
+            console.error('failed to delete bucketlist:',error.response.data);
         }
 
     };
@@ -41,7 +41,7 @@ function BucketList () {
             console.log("deleting all bucketlist successfully");
             setBucketListData([]);
         }catch(error){
-            console.error('failed to delete all bucket list',error.response.data);
+            console.error('failed to delete all bucketlist',error.response.data);
         }
     }
     return (
@@ -52,54 +52,24 @@ function BucketList () {
                     {bucketListData.map((item) => (
                         <li className="bucketlist__item" key={item.id}>
                         <div className="bucketlist__details">
-                            <h4 className="bucketlist__city">{item.city}</h4>
+                            <img className="bucketlist__image" src={item.attraction_image} alt={item.city} />
+                            <h4 className="bucketlist__city">{item.attraction_city}</h4>
                             <h5 className="bucketlist__attraction-name">{item.attraction_name}</h5>
                             <p className="bucketlist__description">{item.attraction_description}</p>
                         </div>
                         <img
-                            className="ware-house__deleteicon"
+                            className="bucketlist__deleteicon"
                             src={remove}
                             alt="delete"
-                            onClick={() => deleteBucketList(item.id)}
+                            onClick={deleteBucketList}
                         />
                         </li>
                     ))}
-                    </ul>
-                    <button className="attractions__button" onClick={deleteAllBucketList}>Delete all</button>
-            {/* <table className="bucketlist__table">
-                <thead>
-                    <tr className="bucketlist__row">
-                        <th className="bucketlist__cell"></th>
-                        <th className="bucketlist__cell">City</th>
-                        <th className="bucketlist__cell">Attraction Name</th>
-                        <th className="bucketlist__cell">Attraction Description</th>
-                        <th className="bucketlist__cell">
-                            
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
                     
-                    {bucketListData.map((item) => (
-                        
-                        <tr className="bucketlist__row" key={item.id}>
-                            <button className="attractions__button" onClick={() => deleteAllBucketList(item.id)} >Delete all</button>
-                            <td className="bucketlist__cell">{item.city}</td>
-                            <td className="bucketlist__cell">{item.attraction_name}</td>
-                            <td className="bucketlist__cell">{item.attraction_description}</td>
-                            <td className="bucketlist__cell">
-                            <img
-                    className="ware-house__deleteicon"
-                    src={remove}
-                    alt="delete"
-                    onClick={deleteBucketList}
-                  />
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table> */}
-            <div className="bucketlist__separate"></div>
+                    </ul>
+                    <button className="bucketlist__button" onClick={deleteAllBucketList}>Delete all</button>
+            
+
         </div>
     );
 

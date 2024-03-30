@@ -1,6 +1,7 @@
 import "./Attractions.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
+//import { useNavigate } from "react-router-dom";
 
 function Attractions() {
   const [cities, setCities] = useState([]);
@@ -92,6 +93,7 @@ function Attractions() {
                 src={attraction.attraction_image}
                 alt="attraction"
               />
+             
               <p className="attractions__location">
                 Destination: {attraction.attraction_city}
               </p>
@@ -111,3 +113,4 @@ function Attractions() {
 };
 
 export default Attractions;
+

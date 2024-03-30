@@ -12,6 +12,8 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: white;
+
 
     &__logo{
         font-size: 2rem;
@@ -21,6 +23,14 @@
     }
 
     &__list{
+
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: violet;
+
+        @include tablet{
+        display: inline-flex;
         position: relative;
         font-size: 1.125rem;
         color: violet;
@@ -41,5 +51,6 @@
             transition: .3s;
         }
     }
+}
 }
 
