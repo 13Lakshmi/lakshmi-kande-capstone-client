@@ -1,7 +1,8 @@
 import "./Attractions.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 
 function Attractions() {
   const [cities, setCities] = useState([]);
@@ -87,24 +88,17 @@ function Attractions() {
       <div className="attractions__container">
         {attractions.map((attraction) => {
           return (
-            <div className="attractions__card" key={attraction.id}>
+            <Link to={`/attraction/${attraction.id}`} key={attraction.id}>
+            <div className="attractions__card" >
               <img
                 className="attractions__image"
                 src={attraction.attraction_image}
                 alt="attraction"
               />
              
-              <p className="attractions__location">
-                Destination: {attraction.attraction_city}
-              </p>
-              <p className="attractions__name">
-                Attraction name: {attraction.attraction_name}
-              </p>
-              <p className="attractions__description">
-                Description: {attraction.attraction_description}
-              </p>
-              <button className="attractions__button" onClick={() =>{handleAddToBucketlist(attraction.id,attraction.attraction_city,attraction.attraction_description,attraction.attraction_image,attraction.attraction_name)}}>Add to bucketlist</button>
+             
             </div>
+            </Link>
           );
         })}
       </div>

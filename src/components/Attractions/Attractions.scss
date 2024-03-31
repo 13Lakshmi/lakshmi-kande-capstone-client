@@ -39,9 +39,9 @@
     &__card {
         width: 16rem;
         max-width: 400px; // Set a maximum width
-        height: 40rem;
-        margin-bottom: 20px;
-        padding: 20px;
+       
+         margin-bottom: 20px;
+         padding: 20px;
          background-color: transparent;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -50,22 +50,22 @@
 
         @include tablet{
             width: 26rem;
-        max-width: 400px; 
+        max-width: 400px;
         height: 38rem;
         }
         @include desktop{
             width: 26rem;
-        max-width: 400px; 
+        max-width: 400px;
         }
-        
+
         &:hover {
             background-color: rgba(0, 0, 0, 0.1); // Change background color on hover
             transform: scale(1.05); // Scale up on hover
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // Added shadow on hover
         }
-      
+
     }
-    
+
 
     &__image {
         width: 100%;
@@ -74,42 +74,8 @@
         border-radius: 8px 8px 0 0;
     }
 
-    &__name {
-        margin-top: 10px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-    }
 
-    &__location {
-        margin-top: 5px;
-        font-size: 14px;
-        color: mediumpurple;
-    }
 
-    &__description {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #555555;
-    }
-    &__button {
-        margin-top: 15px;
-        align-self: flex-end  ;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 1rem;
-        cursor: pointer;
-        opacity: 0;
-        transition: background-color 0.3s ease,transform 0.3s ease, box-shadow 0.3s ease;
-        
-        &:hover {
-            transform: scale(1.2);
-            opacity: 1;
-        }
-    }
 
 }
 

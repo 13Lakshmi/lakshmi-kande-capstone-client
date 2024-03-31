@@ -25,9 +25,10 @@ function BucketList () {
 
 
     const deleteBucketList = async(id) =>{
+        console.log(id);
         try{
-            const response = await axios.delete('http://localhost:8080/bucketlist/${id}');
-            console.log("deleted all buckelist");
+            await axios.delete(`http://localhost:8080/bucketlist/${id}`);
+            console.log("deleted buckelist",id);
             setBucketListData(bucketListData.filter(item => item.id !== id));
         }catch(error){
             console.error('failed to delete bucketlist:',error.response.data);
@@ -37,7 +38,7 @@ function BucketList () {
 
     const deleteAllBucketList = async() =>{
         try{
-            const response = await axios.delete('http://localhost:8080/bucketlist');
+            await axios.delete('http://localhost:8080/bucketlist');
             console.log("deleting all bucketlist successfully");
             setBucketListData([]);
         }catch(error){
@@ -61,7 +62,7 @@ function BucketList () {
                             className="bucketlist__deleteicon"
                             src={remove}
                             alt="delete"
-                            onClick={deleteBucketList}
+                            onClick={() =>{ deleteBucketList(item.id)}}
                         />
                         </li>
                     ))}

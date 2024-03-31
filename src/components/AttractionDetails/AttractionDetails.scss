@@ -1,6 +1,42 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-.attraction-details{
-    color: black;
+
+.attractiondetails {
+    &__title {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    &__city {
+        margin-top: 5px;
+        font-size: 14px;
+        color: blue;
+    }
+    &__name {
+        margin-top: 5px;
+        font-size: 14px;
+        color: mediumpurple;
+    }
+    &__description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555555;
+    }
+
+    &__button {
+        margin-top: 15px;
+        align-self: flex-end;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        opacity: 0;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
 }

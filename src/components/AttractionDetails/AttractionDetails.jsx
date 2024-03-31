@@ -1,70 +1,61 @@
-// import React from "react";
-// import axios from "axios";
+import "./AttractionDetails.scss";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-// function AttractionDetails({ attraction }) {
+function AttractionDetails() {
+    const [attractionDetails, setAttractionDetails] = useState({});
+    const { id } = useParams();    
+
+   
+    useEffect(() => {
+        const getAttractionDetails = async () => {
+          try {
+            const response = await axios.get(`http://localhost:8080/attractions/details/${id}`);
+            setAttractionDetails(response.data);
+          } catch (error) {
+            console.log(error);
+          }
+        };
+        getAttractionDetails();
+      }, [id]);
+
+      const handleAddToBucketlist = async (id,city,Description,image,name) => {
+        console.log(id,city,Description,image,name);
+        
+        const data = {
+          attraction_id:id,
+          attraction_city: city,
+          attraction_name: name,
+          attraction_description: Description,
+          attraction_image: image,
+        };
+        console.log(data);
+        try {
+          const response = await axios.post('http://localhost:8080/bucketlist/bucketlist', data);
+          console.log("Data added to bucket list:", response.data);
+        } catch (error) {
+          console.log("Failed to add data to bucket list:", error);
+        }
+      };
     
-//     if (!attraction) {
-//         console.log("Attraction details not available");
-//         return <div>Loading...</div>;
-//       }
+      return (
+        <div className="attractiondetails">
+          <h2 className="attractiondetails__title">Attraction Details</h2>
+          <p className="attractiondetails__city">Attraction City: {attractionDetails.attraction_city}</p>
+          <p className="attractiondetails__name">Attraction Name: {attractionDetails.attraction_name}</p>
+          <p className="attractiondetails_description">Attraction Description: {attractionDetails.attraction_description}</p>
+          <button className="attractionsdetails__button" onClick={() =>{handleAddToBucketlist(id,attractionDetails.attraction_city,attractionDetails.attraction_description,attractionDetails.attraction_image,attractionDetails.attraction_name)}}>Add to bucketlist</button>
+        </div>
+      );
+    }
 
-//       const { id, attraction_image, attraction_city, attraction_name, attraction_description } = attraction;
 
-//       const handleAddToBucketlist = async () => {
-//         // Use destructured variables directly in the function
-//         const data = {
-//           attraction_id: id,
-//           attraction_city,
-//           attraction_name,
-//           attraction_description,
-//           attraction_image,
-//         };
+export default AttractionDetails;
+
+
+
+
+
+
     
-//         try {
-//           const response = await axios.post('http://localhost:8080/bucketlist/bucketlist', data);
-//           console.log("Data added to bucket list:", response.data);
-//         } catch (error) {
-//           console.log("Failed to add data to bucket list:", error);
-//         }
-//       };
-// //     const handleAddToBucketlist = async (id,city,Description,image,name) => {
-// //     console.log(id,city,Description,image,name);
-    
-// //     const data = {
-// //       attraction_id:id,
-// //       attraction_city: city,
-// //       attraction_name: name,
-// //       attraction_description: Description,
-// //       attraction_image: image,
-// //     };
-// //     console.log(data);
-// //     try {
-// //       const response = await axios.post('http://localhost:8080/bucketlist/bucketlist', data);
-// //       console.log("Data added to bucket list:", response.data);
-// //     } catch (error) {
-// //       console.log("Failed to add data to bucket list:", error);
-// //     }
-// //   };
-
-//   return (
-//     <div className="attraction-details">
-//       <img
-//         className="attraction-details__image"
-//         src={attraction_image}
-//         alt="attraction"
-//       />
-//       <p className="attraction-details__location">
-//         Destination: {attraction_city}
-//       </p>
-//       <p className="attraction-details__name">
-//         Attraction name: {attraction_name}
-//       </p>
-//       <p className="attraction-details__description">
-//         Description: {attraction_description}
-//       </p>
-//       <button className="attractions__button" onClick={() =>{handleAddToBucketlist(attraction.id,attraction.attraction_city,attraction.attraction_description,attraction.attraction_image,attraction.attraction_name)}}>Add to bucketlist</button>
-//     </div>
-//   );
-// }
-
-// export default AttractionDetails;
