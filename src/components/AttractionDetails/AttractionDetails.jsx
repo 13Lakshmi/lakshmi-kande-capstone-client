@@ -45,7 +45,7 @@ function AttractionDetails() {
           <p className="attractiondetails__city">Attraction City: {attractionDetails.attraction_city}</p>
           <p className="attractiondetails__name">Attraction Name: {attractionDetails.attraction_name}</p>
           <p className="attractiondetails_description">Attraction Description: {attractionDetails.attraction_description}</p>
-          <button className="attractionsdetails__button" onClick={() =>{handleAddToBucketlist(id,attractionDetails.attraction_city,attractionDetails.attraction_description,attractionDetails.attraction_image,attractionDetails.attraction_name)}}>Add to bucketlist</button>
+          <button className="attractiondetails__button" onClick={() =>{handleAddToBucketlist(id,attractionDetails.attraction_city,attractionDetails.attraction_description,attractionDetails.attraction_image,attractionDetails.attraction_name)}}>Add to bucketlist</button>
         </div>
       );
     }
