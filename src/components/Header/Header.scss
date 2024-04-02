@@ -5,6 +5,12 @@
 
 
 .header {
+    &__logo{
+      width:6rem;
+      top:1rem;
+      left:1rem;
+      position: absolute;
+    }
     
     &__menu-bars {
       position: absolute;
@@ -13,6 +19,7 @@
       font-size: 2rem;
       background: none;
       color: $White-smoke;
+      
     }
   
     &__menu {

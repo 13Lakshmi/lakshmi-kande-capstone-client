@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import HeaderData from './HeaderData';
+import  logo  from "../../assets/Logo/Logo1.JPG";
 
 
 const Header = () => {
@@ -16,14 +17,19 @@ const Header = () => {
 }
     return (
         <div className='header'>
-            <Link to='' className='header__menu-bars'
-                 onClick={showSideBar}>
-                 <FaBars />
-            </Link>
-            
-            <div className='header__nav-bar'>
+                <div className="header__logo-container">
+                    <Link to="/">
+                        <img className="header__logo" src={logo} alt= "header logo"></img>
+                    </Link>
+                </div>
                 
-            </div>
+            
+                <div className='header__nav-bar'>
+                <Link to='' className='header__menu-bars'
+                        onClick={showSideBar}>
+                        <FaBars />
+                    </Link>
+                </div>
             <div className={sidebar ? 'header__menu active' : 'header__menu'}>
                 <ul className='header__items' onClick={showSideBar}>
                     <li className="header__toggle">
@@ -43,7 +49,7 @@ const Header = () => {
                     })}
                 </ul>
             </div>
-            </div>
+        </div>
             
     );
 };

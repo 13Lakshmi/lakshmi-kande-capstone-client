@@ -8,7 +8,7 @@ import SignUp from './components/SignUp/SignUp';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Attractions from './components/Attractions/Attractions';
-import BucketList from './components/Bucketlist/BucketList';
+import BucketList from './components/BucketList/BucketList';
 import AttractionDetails from './components/AttractionDetails/AttractionDetails';
 
 
