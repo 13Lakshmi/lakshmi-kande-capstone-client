@@ -14,7 +14,6 @@ function BucketList () {
         const getBucketList = async() =>{
             try{
                 const response = await axios.get('http://localhost:8080/bucketlist');
-                console.log(response.data);
                 setBucketListData(response.data);
             }catch(error){
                 console.log('error fetching bucketlist',error);
@@ -25,7 +24,6 @@ function BucketList () {
 
 
     const deleteBucketList = async(id) =>{
-        console.log(id);
         try{
             await axios.delete(`http://localhost:8080/bucketlist/${id}`);
             console.log("deleted buckelist",id);
@@ -39,7 +37,6 @@ function BucketList () {
     const deleteAllBucketList = async() =>{
         try{
             await axios.delete('http://localhost:8080/bucketlist');
-            console.log("deleting all bucketlist successfully");
             setBucketListData([]);
         }catch(error){
             console.error('failed to delete all bucketlist',error.response.data);

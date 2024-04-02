@@ -11,13 +11,14 @@
       margin-bottom: 2rem;
       font-size: 1.5rem;
       font-weight: bold;
+      color:$dark-magenta;
   }
 
   &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px;
+      gap: 1.25rem;
       padding: 0;
       list-style-type: none;
   }
@@ -26,15 +27,15 @@
      display: flex;
      flex-direction: column;
      position: relative;
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #FEFAF5;
-      border-radius: 8px;
+      margin-bottom: 1.25rem;
+      padding: 1.25rem;
+      background-color: $floral-white;
+      border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
       @include tablet { 
         flex-direction: column; 
-        max-width: 400px;
+        max-width: 25rem;
         margin: 0 auto; 
       }
 
@@ -44,21 +45,21 @@
       }
 
       &:hover {
-          background-color: #f8f8f8;
+          background-color: $White-smoke;
           transform: scale(1.05);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       }
   }
 
   &__details {
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
   }
 
   &__image {
       width: 100%;
-      height: 200px;
+      height: 12.5rem;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       transition: transform 0.3s ease; 
 
       &:hover {
@@ -70,19 +71,19 @@
       margin:0;
       font-size: 1.2rem;
       font-weight: bold;
-      color: gold;
+      color: $gold;
   }
 
   &__attraction-name {
       margin:0;
       font-size: 1rem;
-      color: #555555;
+      color: $davys-grey;
   }
 
   &__description {
       margin:0;
       font-size: 0.9rem;
-      color: #777777;
+      color: $grey;
   }
 
   &__deleteicon{
@@ -97,11 +98,11 @@
   &__button {
       height:2rem;
       width:7rem;
-      padding: 1px 20px;
-      background-color: #4CAF50;
-      color: white;
+      padding: 0.063rem 1.25rem;
+      background-color: $Mint-Green;
+      color: $White-smoke;
       border: none;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;

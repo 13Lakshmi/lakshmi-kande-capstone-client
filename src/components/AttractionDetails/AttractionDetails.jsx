@@ -21,7 +21,7 @@ function AttractionDetails() {
       }, [id]);
 
       const handleAddToBucketlist = async (id,city,Description,image,name) => {
-        console.log(id,city,Description,image,name);
+        
         
         const data = {
           attraction_id:id,
@@ -30,7 +30,6 @@ function AttractionDetails() {
           attraction_description: Description,
           attraction_image: image,
         };
-        console.log(data);
         try {
           const response = await axios.post('http://localhost:8080/bucketlist/bucketlist', data);
           console.log("Data added to bucket list:", response.data);
@@ -44,7 +43,7 @@ function AttractionDetails() {
           <h2 className="attractiondetails__title">Attraction Details</h2>
           <p className="attractiondetails__city">Attraction City: {attractionDetails.attraction_city}</p>
           <p className="attractiondetails__name">Attraction Name: {attractionDetails.attraction_name}</p>
-          <p className="attractiondetails_description">Attraction Description: {attractionDetails.attraction_description}</p>
+          <p className="attractiondetails__description">Attraction Description: {attractionDetails.attraction_description}</p>
           <button className="attractiondetails__button" onClick={() =>{handleAddToBucketlist(id,attractionDetails.attraction_city,attractionDetails.attraction_description,attractionDetails.attraction_image,attractionDetails.attraction_name)}}>Add to bucketlist</button>
         </div>
       );

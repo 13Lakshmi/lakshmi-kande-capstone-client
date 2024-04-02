@@ -17,7 +17,6 @@ function SignUp(){
         event.preventDefault();
         try {
             await axios.post('http://localhost:8080/users/signup', { username, password, firstname, lastname });
-            console.log('Signup successful');
             navigate('/');
         } catch (error) {
             console.error('Signup failed:', error.response.data.error);

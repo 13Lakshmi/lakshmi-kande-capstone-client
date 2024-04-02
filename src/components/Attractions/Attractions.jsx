@@ -13,7 +13,6 @@ function Attractions() {
     const getCities = async () => {
       try {
         const response = await axios.get("http://localhost:8080/cities");
-        console.log(response.data);
         setCities(response.data);
       } catch (err) {
         console.log(err);
@@ -29,7 +28,6 @@ function Attractions() {
           const response = await axios.get(
             `http://localhost:8080/attractions/${selectedCity}`
           );
-          console.log(response.data);
           const attractionsDataRes = response.data;
           setAttractions(attractionsDataRes);
         } catch (err) {
@@ -42,7 +40,6 @@ function Attractions() {
 
 
   const handleAddToBucketlist = async (id,city,Description,image,name) => {
-    console.log(id,city,Description,image,name);
     
     const data = {
       attraction_id:id,
@@ -51,7 +48,6 @@ function Attractions() {
       attraction_description: Description,
       attraction_image: image,
     };
-    console.log(data);
     try {
       const response = await axios.post('http://localhost:8080/bucketlist/bucketlist', data);
       console.log("Data added to bucket list:", response.data);
@@ -88,17 +84,20 @@ function Attractions() {
       <div className="attractions__container">
         {attractions.map((attraction) => {
           return (
-            <Link to={`/attraction/${attraction.id}`} key={attraction.id}>
+            <Link className="attractions__link" to={`/attraction/${attraction.id}`} key={attraction.id}>
             <div className="attractions__card" >
               <img
                 className="attractions__image"
                 src={attraction.attraction_image}
                 alt="attraction"
               />
+              <p className="attractions__city">{attraction.attraction_name}</p>
              
-             
+              
             </div>
+            
             </Link>
+           
           );
         })}
       </div>

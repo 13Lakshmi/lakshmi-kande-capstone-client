@@ -3,40 +3,49 @@
 @use "../../styles/partials/mixins" as *;
 
 .attractiondetails {
+    
+      padding: 1.25rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      max-width: 62.5rem;
+      width: 100%;
+      text-align: left;
+      color: white;
+
+    
     &__title {
-        margin-top: 10px;
-        font-size: 18px;
+        margin-top: 0.625rem;
+        font-size: 1.125rem;
         font-weight: bold;
-        color: #333;
+        color: black;
     }
 
     &__city {
-        margin-top: 5px;
-        font-size: 14px;
-        color: blue;
+        margin-top: 0.313rem;
+        font-size: 0.875rem;
+        color: black;
     }
     &__name {
-        margin-top: 5px;
-        font-size: 14px;
-        color: mediumpurple;
+        margin-top: 0.313rem;
+        font-size: 0.875rem;
+        color: black;
     }
     &__description {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #555555;
-    }
+        margin-top: 0.625rem;
+        font-size: 0.875rem;
+        color: black;
+        }
+  
 
     &__button {
-        margin-top: 15px;
+        margin-top: 0.938rem;
         align-self: flex-end;
-        padding: 10px 20px;
+        padding: 0.625rem 1.25rem;
         background-color: #4CAF50;
         color: white;
         border: none;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         font-size: 1rem;
-        // cursor: pointer;
-        // opacity: 0;
-        // transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
 }

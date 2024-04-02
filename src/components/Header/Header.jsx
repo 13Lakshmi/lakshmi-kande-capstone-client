@@ -10,17 +10,16 @@ const Header = () => {
 
     const [sidebar,setSideBar] = useState(false);
 
-    const showSideBar = () => setSideBar(!sidebar)
-
+    const showSideBar = (event) => {
+    event.preventDefault();
+    setSideBar(!sidebar)
+}
     return (
         <div className='header'>
-            <div className='header__image'>
             <Link to='' className='header__menu-bars'
                  onClick={showSideBar}>
                  <FaBars />
             </Link>
-            <a href="logo" className='header__logo'>Logo</a>
-            </div>
             
             <div className='header__nav-bar'>
                 

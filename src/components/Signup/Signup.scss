@@ -4,16 +4,16 @@
 
 
 .form {
-    width:420px;
+    width:26.25rem;
     background: transparent;
-    color: white;
+    color: $White-smoke;
     border-radius:2.5rem;
     padding:1.875rem 2.5rem;
 
   &__title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: white;
+    color: $White-smoke;
     text-align: center;
     
 }
@@ -28,8 +28,7 @@
     height:100%;
     background: transparent;
     outline: none;
-    border:2px solid rgba(255,255,255,0.2);
-    color: white;
+    border:2px solid $White-smoke;
     padding:1.25rem 2.813rem 1.25rem 1.25rem;
     position: relative;
     margin-bottom:1rem;
@@ -37,11 +36,12 @@
     
 }
 ::placeholder{
-    color: white;
+    color: $White-smoke;
+    background: transparent;
 }
 &__icon{
     position: absolute;
-    right:20px;
+    right:1.25rem;
     top:50%;
     transform: translateY(-50%);
    
@@ -49,14 +49,14 @@
 &__button{
     width:100%;
     height:2.813rem;
-    background: white;
+    background: $White-smoke;
     border:none;
     outline:none;
     border-radius: 2.5rem;
     box-shadow: 0 0 0.625rem rgba(0,0,0, 0.1);
     cursor: pointer;
     font-size: 1rem;
-    color: #333;
+    color: $black;
     font-weight: 700;
 }
 }

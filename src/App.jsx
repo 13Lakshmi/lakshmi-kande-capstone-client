@@ -19,7 +19,6 @@ function App() {
  // Function to handle login
   const handleLogin = () => {
     setIsLoggedIn(true);
-    console.log('working');
   };
 
   // Function to handle logout
@@ -44,7 +43,7 @@ function App() {
                   <Route path="/bucketlist" element={<BucketList />} />
           </>
                   ) :(
-                    <Route path="/" element={<Navigate to="/" />} />
+                    <Route path="/" element={<Login onLogin={handleLogin} />} />
 
                   )}
             

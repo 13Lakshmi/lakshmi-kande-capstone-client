@@ -12,11 +12,11 @@
       right: 1rem;
       font-size: 2rem;
       background: none;
-      color: white;
+      color: $White-smoke;
     }
   
     &__menu {
-      background-color: #060b26;
+      background-color: $dark-blue;
       width: 15.625rem;
       height: 100vh;
       display: flex;
@@ -41,7 +41,7 @@
   
     &__items li {
       padding: 1rem;
-      border-bottom: 1px solid #ccc;  
+      border-bottom: 1px solid $White-smoke;  
     }
   
     &__items li:last-child {
@@ -49,7 +49,7 @@
     }
   
     &__items li a {
-      color: #fff;
+      color: $White-smoke;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -59,15 +59,13 @@
       margin-left: 1rem; 
     }
   
-    
-  
     &__toggle {
       display: flex;
       justify-content: flex-end; 
     }
   
     &__bars {
-      color: #fff;
+      color: $White-smoke;
     }
   }
   
