@@ -2,55 +2,73 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.header{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:1.25rem 6.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background-color: white;
 
 
-    &__logo{
-        font-size: 2rem;
-        color: violet;
-        text-decoration: none;
-        font-weight: 700;
-    }
-
-    &__list{
-
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        color: violet;
-
-        @include tablet{
-        display: inline-flex;
-        position: relative;
-        font-size: 1.125rem;
-        color: violet;
-        font-weight: 500;
-        text-decoration: none;
-        margin-left:2.5rem ;
-        
+.header {
     
-        &:hover::after
-        {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left:0;
-            width:100%;
-            height:2px;
-            background: white;
-            transition: .3s;
-        }
+    &__menu-bars {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      background: none;
+      color: white;
     }
-}
-}
+  
+    &__menu {
+      background-color: #060b26;
+      width: 15.625rem;
+      height: 100vh;
+      display: flex;
+      flex-direction: column; 
+      position: fixed;
+      top: 0;
+      right: -100%;
+      transition: 850ms;
+      z-index: 1; 
+    }
+  
+    &__menu.active {
+      right: 0; 
+      height: 100vh;
+    }
+  
+    &__items {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    &__items li {
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;  
+    }
+  
+    &__items li:last-child {
+      border-bottom: none; 
+    }
+  
+    &__items li a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+    }
+     li a span {
+      margin-left: 1rem; 
+    }
+  
+    
+  
+    &__toggle {
+      display: flex;
+      justify-content: flex-end; 
+    }
+  
+    &__bars {
+      color: #fff;
+    }
+  }
+  
 

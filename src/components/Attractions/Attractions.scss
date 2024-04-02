@@ -38,10 +38,10 @@
 
     &__card {
         width: 16rem;
-        max-width: 400px; // Set a maximum width
+        max-width: 400px; 
          margin-bottom: 20px;
         padding: 20px;
-        
+        background-color: white;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease, transform 0.3s ease;
@@ -50,7 +50,6 @@
         @include tablet{
             width: 26rem;
         max-width: 400px;
-       // height: 38rem;
         }
         @include desktop{
             width: 26rem;
@@ -58,9 +57,9 @@
         }
 
         &:hover {
-            background-color: rgba(0, 0, 0, 0.1); // Change background color on hover
-            transform: scale(1.05); // Scale up on hover
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // Added shadow on hover
+            background-color: rgba(0, 0, 0, 0.1); 
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
             background-color: white;
         }
 
@@ -73,10 +72,6 @@
         object-fit: cover;
         border-radius: 8px 8px 0 0;
     }
-
-
-
-
 }
 
 

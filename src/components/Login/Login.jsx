@@ -1,22 +1,35 @@
 import "./Login.scss";
-import React from "react";
+import React, {  useState, useContext } from "react";
 import {  FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { UserContext } from "../UserContext";
 
-function Login() {
-    const navigate = useNavigate();
+const Login = ({ onLogin }) => {
 
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const { setLoggedInUser } = useContext(UserContext);
 
-    const toAttractions = (event) =>{
-      event.preventDefault();
-      navigate("/Attractions");
-  }
+  const handleLogin = async (event) => {
+    event.preventDefault();
+      try {
+        const response =  await axios.post('http://localhost:8080/users/login', { username, password });
+              const loggedInUser = response.data.username;
+              setLoggedInUser(loggedInUser);
+              onLogin();
+              navigate('/attractions');
+      } catch (error) {
+          console.error('Login failed:', error.response.data.error);
+      }
+  };
+  const toSignUp = (event) =>{
+    event.preventDefault();
+    navigate("/SignUp");
+}
 
-    const toSignUp = (event) =>{
-        event.preventDefault();
-        navigate("/SignUp");
-    }
 
   return (
     <div className="form">
@@ -31,12 +44,12 @@ function Login() {
             placeholder="Email"
             id="email"
             name="email"
+            onChange={(e) => setUsername(e.target.value)}
           />
           <MdEmail className="form__icon" />
           </div>
           
-        
-          
+       
           <div className="form__input-box">
           <input
             className="form__input"
@@ -44,14 +57,12 @@ function Login() {
             placeholder="********"
             id="password"
             name="password"
+            onChange={(e) => setPassword(e.target.value)}
           />
           <FaLock className="form__icon" />
           </div>
-          
-          
-       
 
-        <button onClick={toAttractions} className="form__button" type="submit">
+        <button  className="form__button" onClick={handleLogin} type="submit">
           Log In
         </button>
       </div>
@@ -61,8 +72,13 @@ function Login() {
           Don't have an account? <a href=" ">  Signup </a>
         </p>
       </div>
+    
     </div>
+    
   );
 }
 
 export default Login;
+
+
+

@@ -2,18 +2,13 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-body{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     min-height: 100vh;
-     background-color: khaki;
-    
-}
+
 .form{
     width:420px;
-    background: transparent;
+    background:transparent;
     color: white;
+    justify-content: center;
+     align-items: center;
     border-radius:2.5rem;
     padding:1.875rem 2.5rem;
     margin-left: 5rem;
