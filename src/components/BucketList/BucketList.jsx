@@ -14,6 +14,7 @@ function BucketList () {
         const getBucketList = async() =>{
             try{
                 const response = await axios.get('http://localhost:8080/bucketlist');
+                console.log(response);
                 setBucketListData(response.data);
             }catch(error){
                 console.log('error fetching bucketlist',error);
@@ -54,6 +55,7 @@ function BucketList () {
                             <h4 className="bucketlist__city">{item.attraction_city}</h4>
                             <h5 className="bucketlist__attraction-name">{item.attraction_name}</h5>
                             <p className="bucketlist__description">{item.attraction_description}</p>
+                            {/* <p className="bucketlist__description">{item.attraction_url}</p> */}
                         </div>
                         <img
                             className="bucketlist__deleteicon"

@@ -5,7 +5,7 @@
 
 
 .attractions {
-    margin-top:112rem;
+    margin-top:114rem;
     margin-bottom: 3rem;
     @include tablet{
     margin-top: 110rem;
@@ -24,7 +24,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
         font-weight: 400;
-        color:$black;
+        color:$gold;
     }
 
     &__dropdown {
