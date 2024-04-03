@@ -3,7 +3,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .bucketlist {
-  margin: 10rem 2rem 5rem 2rem;
+  margin: 160rem 2rem 10rem 2rem;
+  @include tablet{
+    margin:115rem 2rem 5rem 2rem;
+  }
+  @include desktop{
+    margin:65rem 2rem 5rem 2rem;
+  }
   
 
   &__title {
