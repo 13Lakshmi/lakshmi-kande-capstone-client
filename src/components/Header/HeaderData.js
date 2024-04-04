@@ -8,6 +8,11 @@ const HeaderData = [
 
     },
     {
+        title:"Add Attractions",
+        path:"/AddAttraction"
+
+    },
+    {
         title:"Bucketlist",
         path:"/bucketlist"
 

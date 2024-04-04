@@ -6,11 +6,13 @@
 
 .header {
     &__logo{
-      width:4rem;
+      width:6rem;
       top:1rem;
       left:1rem;
       position: absolute;
-      border:2px solid $Mint-Green;
+      border-radius: 9px;
+     // border:2px solid $Mint-Green;
+      
     }
     
     &__menu-bars {
@@ -19,7 +21,7 @@
       right: 1rem;
       font-size: 2rem;
       background: none;
-      color: $White-smoke;
+      color: $black;
       
     }
   
@@ -38,7 +40,7 @@
   
     &__menu.active {
       right: 0; 
-      height: 100vh;
+      height: 94vh;
     }
   
     &__items {

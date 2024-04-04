@@ -40,7 +40,7 @@ function AttractionDetails() {
         try {
           const response = await axios.post('http://localhost:8080/bucketlist/bucketlist', data);
           console.log(response);
-          console.log("Data added to bucket list:", response.data);
+          console.alert("Data added to bucket list:", response.data);
         } catch (error) {
           console.log("Failed to add data to bucket list:", error);
         }
@@ -52,7 +52,7 @@ function AttractionDetails() {
       return (
         <div className="attractiondetails">
           <h2 className="attractiondetails__title">Attraction Details</h2>
-          <p className="attractiondetails__city">Attraction City: {attractionDetails.attraction_city}</p>
+          <p className="attractiondetails__city" > Attraction City: {attractionDetails.attraction_city}</p>
           <p className="attractiondetails__name">Attraction Name: {attractionDetails.attraction_name}</p>
           <p className="attractiondetails__description">Attraction Description: {attractionDetails.attraction_description}</p>
           <div className="attractiondetails__container">

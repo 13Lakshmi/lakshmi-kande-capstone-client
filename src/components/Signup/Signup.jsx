@@ -24,52 +24,52 @@ function SignUp(){
     };
 
     return(
-            <div className="form">
-                <div className="form__signup">
-                <h2 className="form__title">SignUp</h2>
+            <div className="signup">
+                <div className="signup__signup">
+                <h2 className="signup__title">SignUp</h2>
 
-                <div className="form__input-box">
+                <div className="signup__input-box">
                 <input
-                    className="form__input"
+                    className="signup__input"
                     type="text"
                     placeholder="First Name"
                     onChange={(e) => setFirstname(e.target.value)}
                 />
-                <FaUser className="form__icon" />
+                <FaUser className="signup__icon" />
                 </div>
 
-                <div className="form__input-box">
+                <div className="signup__input-box">
                 <input
-                    className="form__input"
+                    className="signup__input"
                     type="text"
                     placeholder="Last Name"
                     onChange={(e) => setLastname(e.target.value)}
                 />
-                <FaUser className="form__icon" />
+                <FaUser className="signup__icon" />
                 
                 </div>
 
-                <div className="form__input-box">
+                <div className="signup__input-box">
                 <input
-                    className="form__input"
+                    className="signup__input"
                     type="text"
                     placeholder="Email"
                     onChange={(e) => setUsername(e.target.value)}
                 />
-                <MdEmail className="form__icon" />
+                <MdEmail className="signup__icon" />
                 </div>
             
-                <div className="form__input-box">
+                <div className="signup__input-box">
                 <input
-                    className="form__input"
+                    className="signup__input"
                     type="password"
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <FaLock className="form__icon" />
+                <FaLock className="signup__icon" />
                 </div>
 
-                <button onClick={handleSignup} className="form__button" type="submit">
+                <button onClick={handleSignup} className="signup__button" type="submit">
                  Sign Up
                 </button>
             </div>

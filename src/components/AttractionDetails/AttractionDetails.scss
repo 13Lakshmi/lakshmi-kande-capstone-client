@@ -3,11 +3,10 @@
 @use "../../styles/partials/mixins" as *;
 
 .attractiondetails {
-    
       padding: 1.25rem;
       border-radius: 0.5rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
+      background-color: $White-smoke;
       max-width: 62.5rem;
       text-align: left;
       color: $White-smoke;
@@ -21,13 +20,14 @@
     &__title {
         margin-top: 0.625rem;
         font-size: 2rem;
-        font-weight: bold;
+        font-weight: 700;
         color: $black;
     }
 
     &__city {
         margin-top: 0.313rem;
         font-size: 1rem;
+        font-weight: 500;
         color:$black;
     }
     &__name {
@@ -50,7 +50,7 @@
         margin-top: 2rem;
     }
     &__url{  
-            color: $black; 
+            color: $dark-blue; 
             text-decoration: none;
           }
           

@@ -3,7 +3,9 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
 
-
+body{
+    background-image: url("../../assets/Images/backgroundimg.jpg");
+}
 .attractions {
     margin-top:115rem;
     margin-bottom: 3rem;
@@ -24,7 +26,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
         font-weight: 400;
-        color:$dark-magenta;
+        color:salmon;
     }
 
     &__dropdown {
@@ -90,7 +92,11 @@
 &__link{
     text-decoration: none;
 }
-    
+&__readmore{
+    text-decoration: none;
+    color: rebeccapurple;
+    margin-left: 9rem;
+}
 }
 
 

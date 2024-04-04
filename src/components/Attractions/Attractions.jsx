@@ -80,11 +80,12 @@ function Attractions() {
           </select>
         </div>
       </div>
+      {/* <Link to="/addattraction" className="addattraction__button">Add Attraction</Link> */}
       {selectedCity && <div className="attractions__separate"></div>}
       <div className="attractions__container">
         {attractions.map((attraction) => {
           return (
-            <Link className="attractions__link" to={`/attraction/${attraction.id}`} key={attraction.id}>
+           // <Link className="attractions__link" to={`/attraction/${attraction.id}`} key={attraction.id}>
             <div className="attractions__card" >
               <img
                 className="attractions__image"
@@ -92,11 +93,13 @@ function Attractions() {
                 alt="attraction"
               />
               <p className="attractions__city">{attraction.attraction_name}</p>
-             
+              <Link className="attractions__readmore" to={`/attraction/${attraction.id}`}>
+              Read More
+            </Link>
               
             </div>
             
-            </Link>
+            //</Link>
            
           );
         })}

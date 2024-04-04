@@ -1,0 +1,64 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.addattraction {
+    &__card {
+        background-color: $White-smoke;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    
+    &__title{
+        color: $dark-magenta;
+    }
+    &__form{
+     max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    }
+
+    &__input{
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    &__city{
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    &__description{
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px 10px 50px 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+  
+    &__button {
+      width: 100%;
+      padding: 10px;
+      background-color: $Mint-Green;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+  }
+  
