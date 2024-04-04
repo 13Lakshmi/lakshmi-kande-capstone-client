@@ -2,6 +2,7 @@ import "./Attractions.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import arrow from "../../assets/Icons/arrow.png"
 
 
 function Attractions() {
@@ -92,7 +93,8 @@ function Attractions() {
               />
               <p className="attractions__city">{attraction.attraction_name}</p>
               <Link className="attractions__readmore" to={`/attraction/${attraction.id}`}>
-              Read More
+                Read More
+              <img className="attractions__icon" src={arrow} alt="Read More" />
             </Link>
               
             </div>
