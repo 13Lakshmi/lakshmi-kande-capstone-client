@@ -3,15 +3,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .bucketlist {
- // background-color: lavender;
-  width:100%;
-  height: 100vh;
-  margin: 160rem 2rem 10rem 2rem;
+  margin:12rem 2rem 10rem 0;
   @include tablet{
-    margin:115rem 2rem 5rem 2rem;
+    margin:70rem 2rem 5rem 2rem;
   }
   @include desktop{
-    margin:20rem 2rem 5rem 1rem;
+    margin:5rem 2rem 5rem 1rem;
+    width:100%;
   }
   
 
@@ -20,7 +18,8 @@
       margin-bottom: 2rem;
       font-size: 3rem;
       font-weight: bold;
-      color:$dark-magenta;
+      color:$White-smoke;
+    
   }
 
   &__list {

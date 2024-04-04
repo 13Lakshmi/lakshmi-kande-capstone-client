@@ -62,7 +62,7 @@ function Attractions() {
     <div className="attractions">
       <div className="attractions__block">
         <div className="attractions__select-container">
-          <h2 className="attractions__title">Please select your city:</h2>
+          <h2 className="attractions__title">Explore Nearby wonders</h2>
           <select
             className="attractions__dropdown"
             name="mySelect"
@@ -80,12 +80,10 @@ function Attractions() {
           </select>
         </div>
       </div>
-      {/* <Link to="/addattraction" className="addattraction__button">Add Attraction</Link> */}
       {selectedCity && <div className="attractions__separate"></div>}
       <div className="attractions__container">
         {attractions.map((attraction) => {
           return (
-           // <Link className="attractions__link" to={`/attraction/${attraction.id}`} key={attraction.id}>
             <div className="attractions__card" >
               <img
                 className="attractions__image"

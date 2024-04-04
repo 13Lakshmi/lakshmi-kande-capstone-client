@@ -20,7 +20,7 @@ const HeaderData = [
     {
         title:"Logout",
         icon:<AiOutlineLogout />,
-        path:"/"
+        path:"/login"
 
     }
 

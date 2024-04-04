@@ -6,12 +6,15 @@
 
 .header {
     &__logo{
-      width:6rem;
+      
+      width:4rem;
       top:1rem;
       left:1rem;
       position: absolute;
       border-radius: 9px;
-     // border:2px solid $Mint-Green;
+      @include tablet{
+        width:6rem;
+    }
       
     }
     
@@ -21,7 +24,7 @@
       right: 1rem;
       font-size: 2rem;
       background: none;
-      color: $black;
+      color: $White-smoke;
       
     }
   

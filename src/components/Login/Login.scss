@@ -4,7 +4,7 @@
 
 
 .form{
-    width:26.25rem;
+    width:20.25rem;
     color: $White-smoke;
     justify-content: center;
      align-items: center;
@@ -15,7 +15,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    
+    @include tablet{
+        width:26.25rem;
+    }
 
     &__login-title {
         font-size: 1.5rem;
@@ -26,22 +28,28 @@
    }
     &__input-box{
         position: relative;
-        width: 100%;
+        width: 95%;
         height:3.125rem;
         margin:1.875rem 0;
         color: $White-smoke;
+        @include tablet{
+            width:100%;
+        }
     }
     &__input{
-        width:100%;
+        width:95%;
         height:100%;
         outline: none;
         border:2px solid indianred;
-        color:$White-smoke;
+        color:$black;
         padding:1.25rem 2.813rem 1.25rem 1.25rem;
         position: relative;
         margin:0 0 1rem 0;
         border-radius: 2.5rem;
         opacity: 0.8;
+        @include tablet{
+            width:100%;
+        }
         
     }
     ::placeholder{
@@ -57,7 +65,7 @@
     }
 
     &__button{
-        width:100%;
+        width:90%;
         height:2.813rem;
         background: indianred;
         border:none;
@@ -68,6 +76,9 @@
         font-size: 1rem;
         color: $black;
         font-weight: 700;
+        @include tablet{
+            width:100%;
+        }
     }
     &__link{
         font-size: 1rem;

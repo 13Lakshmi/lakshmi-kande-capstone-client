@@ -35,7 +35,7 @@ const Login = ({ onLogin }) => {
     <div className="form">
 
       <div className="form__login">
-        <h1 className="form__login-title">Login</h1>
+        <h1 className="form__login-title">Unlock your Journey Ahead</h1>
 
        <div className="form__input-box">
           <input
